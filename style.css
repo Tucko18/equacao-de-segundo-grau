@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    margin-top: 40px;
+}
+input{
+    margin-top: 40px;
+    width: 100px;
+    height: 150px;
+    font-size: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+ input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+p{
+    display: inline;
+    font-size: 1.5em;
+    
+    top: 6.5em;
+}
+#expoente{
+    position: absolute;
+    top: 4em;
+    left: 27em;
+}
+#plus{
+   font-size: 2em;
+}
+#x{
+   position: absolute;
+   top: 10em;
+   left: 34.5em;
+}
+#calcular{
+    width: 80px;
+    height: 40px;
+    font-size: 1em;
+}
+h2{
+    margin-top: 3em;
+}

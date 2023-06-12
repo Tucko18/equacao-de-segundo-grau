@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Equação de segundo grau</h1>
+    <input type="number" name="valor1" id="valor1" class="for"> <p id="expoente">x²</p> <p id="plus">+</p> <input type="number" name="valor2" id="valor2" class="for"> <p id="x">x</p> <p id="plus">+</p> <input type="number" name="valor3" id="valor3" class="for">
+    <br>
+    <input type="button" value="calcular" id="calcular" onclick="calcular()">
+    <h2 id="resultado">
+        
+    </h2>
+    <script>
+        function calcular() {
+            let a = parseInt(document.getElementById('valor1').value);
+            let b = parseInt(document.getElementById('valor2').value);
+            let c = parseInt(document.getElementById('valor3').value);
+            
+            let delta = b ** 2 - 4 * a * c;
+            let resultado = document.getElementById('resultado');
+            
+            if (delta > 0) {
+                let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                resultado.textContent = "As raízes são x1 = " + x1 + " e x2 = " + x2;
+            } else if (delta === 0) {
+                let x = -b / (2 * a);
+                resultado.textContent = "A raiz dupla é x = " + x;
+            } else {
+                resultado.textContent = "A equação não tem raízes reais.";
+            }
+        }
+    </script>
+</body>
+</html>
